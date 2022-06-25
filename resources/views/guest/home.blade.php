@@ -12,28 +12,28 @@
        
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/admin') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div id="root">
+            <div class="flex-center position-ref full-height">
+                @if (Route::has('login'))
+                    <div class="top-right links">
+                        @auth
+                            <a href="{{ url('/admin') }}">Home</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+    
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Boolpress
-                </div>
-
+                <!-- <div id="root"></div> se mettiamo questo togliamo il primo div id a riga 16-->
+    
                 
             </div>
         </div>
+        
+        <script src="{{asset('js/front.js')}}" charset="utf-8"></script>
     </body>
 </html>
