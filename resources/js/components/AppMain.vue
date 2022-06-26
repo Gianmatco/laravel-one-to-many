@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <h1>{{titolo}}</h1>
         <h2>{{sottotitolo}}</h2>
     </div>
